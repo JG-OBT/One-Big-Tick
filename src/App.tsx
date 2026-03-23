@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Check, ArrowRight, Layout, Server, LifeBuoy, Zap, Clock, CreditCard, Plus, Star, Send, Mail, User, Building, MessageSquare, Cookie, X, ChevronDown } from 'lucide-react';
-import { Routes, Route, Link, useNavigate, useLocation } from 'react-router-dom';
+import { Check, ArrowRight, Layout, Server, LifeBuoy, Zap, Clock, CreditCard, Plus, Send, Mail, User, Building, MessageSquare, Cookie, X, ChevronDown } from 'lucide-react';
+import { Routes, Route, Link, useLocation } from 'react-router-dom';
 
 // --- Components ---
 
@@ -31,14 +31,10 @@ const Button = ({ children, variant = 'primary', className = '', to, ...props }:
     );
   }
 
-  return (
-    <button {...props}>
-      {content}
-    </button>
-  );
+  return <button {...props}>{content}</button>;
 };
 
-const Logo = ({ className = "h-10" }: { className?: string }) => {
+const Logo = ({ className = 'h-10' }: { className?: string }) => {
   const [error, setError] = React.useState(false);
 
   if (error) {
@@ -53,10 +49,10 @@ const Logo = ({ className = "h-10" }: { className?: string }) => {
   }
 
   return (
-    <img 
-      src="/logo.png" 
-      alt="One Big Tick" 
-      className={`${className} w-auto brightness-0 invert`} 
+    <img
+      src="/logo.png"
+      alt="One Big Tick"
+      className={`${className} w-auto brightness-0 invert`}
       onError={() => setError(true)}
       referrerPolicy="no-referrer"
     />
@@ -68,18 +64,30 @@ const Navbar = () => {
   const isHome = location.pathname === '/';
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-4">
-      <div className="max-w-7xl mx-auto flex items-center justify-between glass rounded-full px-8 py-3">
+    <nav className="fixed top-0 left-0 right-0 z-50 px-4 md:px-6 py-3 md:py-4">
+      <div className="max-w-7xl mx-auto flex items-center justify-between glass rounded-full px-5 md:px-8 py-2.5 md:py-3">
         <Link to="/">
           <Logo />
         </Link>
+
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-white/70">
-          <a href={isHome ? "#features" : "/#features"} className="hover:text-brand-orange transition-colors">Features</a>
-          <a href={isHome ? "#how-it-works" : "/#how-it-works"} className="hover:text-brand-orange transition-colors">How it works</a>
-          <a href={isHome ? "#pricing" : "/#pricing"} className="hover:text-brand-orange transition-colors">Pricing</a>
-          <a href={isHome ? "#faq" : "/#faq"} className="hover:text-brand-orange transition-colors">FAQ</a>
+          <a href={isHome ? '#features' : '/#features'} className="hover:text-brand-orange transition-colors">
+            Features
+          </a>
+          <a href={isHome ? '#how-it-works' : '/#how-it-works'} className="hover:text-brand-orange transition-colors">
+            How it works
+          </a>
+          <a href={isHome ? '#pricing' : '/#pricing'} className="hover:text-brand-orange transition-colors">
+            Pricing
+          </a>
+          <a href={isHome ? '#faq' : '/#faq'} className="hover:text-brand-orange transition-colors">
+            FAQ
+          </a>
         </div>
-        <Button to="/contact" variant="secondary" className="px-6 py-2 text-sm">Start Now</Button>
+
+        <Button to="/contact" variant="secondary" className="px-6 py-2 text-sm">
+          Start Now
+        </Button>
       </div>
     </nav>
   );
@@ -113,8 +121,12 @@ const PricingCard = ({ title, price, features, popular = false, delay = 0 }: any
     transition={{ delay }}
     className={`p-10 rounded-[2.5rem] flex flex-col ${popular ? 'bg-brand-orange text-white orange-glow' : 'glass'}`}
   >
-    {popular && <span className="bg-white/20 text-xs font-bold uppercase tracking-widest py-1 px-3 rounded-full self-start mb-6">Most Popular</span>}
-    <h3 className={`text-2xl font-bold mb-2 ${popular ? 'text-white' : 'text-white'}`}>{title}</h3>
+    {popular && (
+      <span className="bg-white/20 text-xs font-bold uppercase tracking-widest py-1 px-3 rounded-full self-start mb-6">
+        Most Popular
+      </span>
+    )}
+    <h3 className="text-2xl font-bold mb-2 text-white">{title}</h3>
     <div className="flex items-baseline gap-1 mb-8">
       <span className="text-5xl font-bold">£{price}</span>
       <span className={popular ? 'text-white/80' : 'text-white/50'}>/month</span>
@@ -127,25 +139,26 @@ const PricingCard = ({ title, price, features, popular = false, delay = 0 }: any
         </div>
       ))}
     </div>
-    <Button to="/contact" variant={popular ? 'dark' : 'primary'} className="w-full">Get Started</Button>
+    <Button to="/contact" variant={popular ? 'dark' : 'primary'} className="w-full">
+      Get Started
+    </Button>
   </motion.div>
 );
 
 // --- Sections ---
 
 const Hero = () => (
-  <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-    {/* Background elements */}
+  <section className="relative min-h-screen flex items-center pt-32 pb-16 md:pt-36 md:pb-20 lg:pt-24 overflow-hidden">
     <div className="absolute top-1/4 -left-20 w-96 h-96 bg-brand-orange/10 blur-[120px] rounded-full" />
     <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-brand-orange/5 blur-[120px] rounded-full" />
-    
-    <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center w-full">
+
+    <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full">
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
@@ -154,41 +167,48 @@ const Hero = () => (
           <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
           UK-Based Web Design Subscription
         </motion.div>
-        <h1 className="text-6xl md:text-8xl font-extrabold tracking-tighter mb-8 leading-[0.9] text-gradient">
+
+        <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-tighter mb-8 leading-[0.95] text-gradient">
           Websites that <br />
           <span className="text-brand-orange">evolve</span> with your business
         </h1>
-        <p className="text-xl text-white/60 mb-10 max-w-lg leading-relaxed">
+
+        <p className="text-lg md:text-xl text-white/60 mb-10 max-w-lg leading-relaxed">
           Professional design. Flexible monthly plans. Effortless updates. The last web agency you'll ever need.
         </p>
+
         <div className="flex flex-col sm:flex-row gap-4">
-          <Button to="/contact">Start Now <ArrowRight size={20} /></Button>
-          <Button variant="secondary" onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}>See How It Works</Button>
+          <Button to="/contact">
+            Start Now <ArrowRight size={20} />
+          </Button>
+          <Button
+            variant="secondary"
+            onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            See How It Works
+          </Button>
         </div>
       </motion.div>
-      
+
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-        className="relative flex items-center justify-center p-12"
+        transition={{ duration: 1, ease: 'easeOut' }}
+        className="relative flex items-center justify-center p-6 md:p-10 lg:p-12"
       >
-        {/* Main Animated Visual */}
         <div className="relative w-full max-w-lg aspect-square">
-          {/* Background Glow */}
-          <motion.div 
-            animate={{ 
+          <motion.div
+            animate={{
               scale: [1, 1.2, 1],
-              opacity: [0.3, 0.5, 0.3]
+              opacity: [0.3, 0.5, 0.3],
             }}
             transition={{ duration: 8, repeat: Infinity }}
             className="absolute inset-0 bg-brand-orange/20 blur-[100px] rounded-full"
           />
-          
-          {/* Floating UI Elements */}
+
           <motion.div
             animate={{ y: [0, -20, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
             className="absolute top-0 left-0 w-2/3 glass p-6 rounded-3xl shadow-2xl z-20"
           >
             <div className="flex items-center gap-3 mb-4">
@@ -207,7 +227,7 @@ const Hero = () => (
 
           <motion.div
             animate={{ y: [0, 20, 0] }}
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+            transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
             className="absolute bottom-0 right-0 w-2/3 glass p-6 rounded-3xl shadow-2xl z-10"
           >
             <div className="flex items-center justify-between mb-6">
@@ -227,7 +247,6 @@ const Hero = () => (
             </div>
           </motion.div>
 
-          {/* Abstract Growth Line */}
           <svg className="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-20" viewBox="0 0 400 400">
             <motion.path
               initial={{ pathLength: 0 }}
@@ -257,9 +276,9 @@ const ProblemSolution = () => (
           </h2>
           <div className="space-y-8">
             {[
-              { title: "Expensive upfront costs", desc: "Paying £5k+ before seeing a single visitor." },
-              { title: "Slow updates", desc: "Waiting weeks for a simple text change." },
-              { title: "Hidden fees", desc: "Hosting, maintenance, and small edits all add up." }
+              { title: 'Expensive upfront costs', desc: 'Paying £5k+ before seeing a single visitor.' },
+              { title: 'Slow updates', desc: 'Waiting weeks for a simple text change.' },
+              { title: 'Hidden fees', desc: 'Hosting, maintenance, and small edits all add up.' },
             ].map((item, i) => (
               <div key={i} className="flex gap-4">
                 <div className="w-6 h-6 rounded-full border border-white/20 flex items-center justify-center shrink-0 mt-1">
@@ -273,11 +292,8 @@ const ProblemSolution = () => (
             ))}
           </div>
         </div>
-        
-        <motion.div 
-          whileHover={{ scale: 1.02 }}
-          className="glass p-12 rounded-[3rem] border-brand-orange/30 relative overflow-hidden"
-        >
+
+        <motion.div whileHover={{ scale: 1.02 }} className="glass p-12 rounded-[3rem] border-brand-orange/30 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-brand-orange/10 blur-[80px] -mr-32 -mt-32" />
           <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
             The <span className="text-brand-orange">One Big Tick</span> <br />
@@ -285,9 +301,9 @@ const ProblemSolution = () => (
           </h2>
           <div className="space-y-8">
             {[
-              { title: "Predictable monthly pricing", desc: "No big bills. Just one flat monthly fee." },
-              { title: "Edits included", desc: "Need a change? Just ask. It's covered." },
-              { title: "Fast turnaround", desc: "Updates live within 24 hours. No stress." }
+              { title: 'Predictable monthly pricing', desc: 'No big bills. Just one flat monthly fee.' },
+              { title: 'Edits included', desc: "Need a change? Just ask. It's covered." },
+              { title: 'Fast turnaround', desc: 'Updates live within 24 hours. No stress.' },
             ].map((item, i) => (
               <div key={i} className="flex gap-4">
                 <div className="w-6 h-6 rounded-full bg-brand-orange/20 flex items-center justify-center shrink-0 mt-1">
@@ -316,19 +332,19 @@ const Features = () => (
         </p>
       </div>
       <div className="grid md:grid-cols-3 gap-8">
-        <FeatureCard 
+        <FeatureCard
           icon={Layout}
           title="DESIGN"
           description="Custom websites aligned to your brand. Fully mobile responsive with logo support included."
           delay={0.1}
         />
-        <FeatureCard 
+        <FeatureCard
           icon={Server}
           title="HOSTING"
           description="Same-day publishing with 99.99% uptime. AWS-backed infrastructure and domain connection."
           delay={0.2}
         />
-        <FeatureCard 
+        <FeatureCard
           icon={LifeBuoy}
           title="SUPPORT"
           description="Edits within 24 hours. Monthly included updates and a personal support email."
@@ -347,11 +363,11 @@ const HowItWorks = () => (
           <h2 className="text-4xl md:text-6xl font-bold mb-12">How it works.</h2>
           <div className="space-y-12">
             {[
-              { step: "01", title: "Tell us what you need", desc: "Share your vision, content, and brand goals with us." },
-              { step: "02", title: "We design and build", desc: "Our experts craft your custom site in record time." },
-              { step: "03", title: "Request updates anytime", desc: "Your business evolves, and your site does too. Just ping us." }
+              { step: '01', title: 'Tell us what you need', desc: 'Share your vision, content, and brand goals with us.' },
+              { step: '02', title: 'We design and build', desc: 'Our experts craft your custom site in record time.' },
+              { step: '03', title: 'Request updates anytime', desc: 'Your business evolves, and your site does too. Just ping us.' },
             ].map((item, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -372,7 +388,7 @@ const HowItWorks = () => (
           <div className="aspect-square glass rounded-[4rem] flex items-center justify-center p-12">
             <motion.div
               animate={{ rotate: 360 }}
-              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
               className="absolute inset-0 border-2 border-dashed border-white/10 rounded-[4rem]"
             />
             <div className="text-center">
@@ -393,35 +409,33 @@ const Pricing = () => (
     <div className="max-w-7xl mx-auto">
       <div className="text-center mb-20">
         <h2 className="text-4xl md:text-6xl font-bold mb-6">Simple pricing.</h2>
-        <p className="text-xl text-white/50 max-w-2xl mx-auto">
-          No contracts. No hidden fees. Cancel anytime.
-        </p>
+        <p className="text-xl text-white/50 max-w-2xl mx-auto">No contracts. No hidden fees. Cancel anytime.</p>
       </div>
       <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        <PricingCard 
+        <PricingCard
           title="Monthly"
           price="100"
           features={[
-            "5-page website",
-            "5 hours edits/month",
-            "Analytics reports",
-            "Hosting included",
-            "SSL Certificate",
-            "Email Support"
+            '5-page website',
+            '5 hours edits/month',
+            'Analytics reports',
+            'Hosting included',
+            'SSL Certificate',
+            'Email Support',
           ]}
           delay={0.1}
         />
-        <PricingCard 
+        <PricingCard
           title="Annual"
           price="83"
           popular={true}
           features={[
-            "Everything in Monthly",
-            "Save £200 per year",
-            "Priority Support",
-            "Free Domain for 1yr",
-            "Quarterly Strategy Call",
-            "Advanced SEO Setup"
+            'Everything in Monthly',
+            'Save £200 per year',
+            'Priority Support',
+            'Free Domain for 1yr',
+            'Quarterly Strategy Call',
+            'Advanced SEO Setup',
           ]}
           delay={0.2}
         />
@@ -436,12 +450,15 @@ const AddOns = () => (
       <h2 className="text-3xl font-bold mb-12 text-center">Need something extra?</h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {[
-          { icon: Plus, title: "Extra pages", price: "£5/ea" },
-          { icon: Zap, title: "Rapid updates", price: "from £50" },
-          { icon: Layout, title: "Logo design", price: "£150" },
-          { icon: CreditCard, title: "Online store", price: "£50/mo" }
+          { icon: Plus, title: 'Extra pages', price: '£5/ea' },
+          { icon: Zap, title: 'Rapid updates', price: 'from £50' },
+          { icon: Layout, title: 'Logo design', price: '£150' },
+          { icon: CreditCard, title: 'Online store', price: '£50/mo' },
         ].map((item, i) => (
-          <div key={i} className="glass p-6 rounded-2xl flex flex-col items-center text-center hover:border-brand-orange/50 transition-colors cursor-default">
+          <div
+            key={i}
+            className="glass p-6 rounded-2xl flex flex-col items-center text-center hover:border-brand-orange/50 transition-colors cursor-default"
+          >
             <item.icon className="text-brand-orange mb-4" size={24} />
             <div className="font-bold mb-1">{item.title}</div>
             <div className="text-xs text-white/40 uppercase tracking-widest">{item.price}</div>
@@ -452,15 +469,12 @@ const AddOns = () => (
   </section>
 );
 
-const FAQItem = ({ question, answer }: { question: string, answer: string, key?: any }) => {
+const FAQItem = ({ question, answer }: { question: string; answer: string; key?: any }) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
     <div className="border-b border-white/5 last:border-0">
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-full py-8 flex items-center justify-between text-left group"
-      >
+      <button onClick={() => setIsOpen(!isOpen)} className="w-full py-8 flex items-center justify-between text-left group">
         <span className="text-xl md:text-2xl font-bold group-hover:text-brand-orange transition-colors">{question}</span>
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
@@ -471,17 +485,15 @@ const FAQItem = ({ question, answer }: { question: string, answer: string, key?:
       </button>
       <motion.div
         initial={false}
-        animate={{ 
-          height: isOpen ? "auto" : 0,
+        animate={{
+          height: isOpen ? 'auto' : 0,
           opacity: isOpen ? 1 : 0,
-          marginBottom: isOpen ? 32 : 0
+          marginBottom: isOpen ? 32 : 0,
         }}
-        transition={{ duration: 0.3, ease: "easeInOut" }}
+        transition={{ duration: 0.3, ease: 'easeInOut' }}
         className="overflow-hidden"
       >
-        <p className="text-lg text-white/60 leading-relaxed max-w-3xl">
-          {answer}
-        </p>
+        <p className="text-lg text-white/60 leading-relaxed max-w-3xl">{answer}</p>
       </motion.div>
     </div>
   );
@@ -490,29 +502,35 @@ const FAQItem = ({ question, answer }: { question: string, answer: string, key?:
 const FAQ = () => {
   const faqData = [
     {
-      question: "Who is this service for?",
-      answer: "Our web design, hosting, and update package is perfect for small businesses or freelance individuals who want a professional website without the heavy upfront and maintenance costs."
+      question: 'Who is this service for?',
+      answer:
+        'Our web design, hosting, and update package is perfect for small businesses or freelance individuals who want a professional website without the heavy upfront and maintenance costs.',
     },
     {
-      question: "How long is the subscription?",
-      answer: "We offer a minimum 12 month term, after which you are free to cancel anytime. We will fully transfer over to you the website and all assets used."
+      question: 'How long is the subscription?',
+      answer:
+        'We offer a minimum 12 month term, after which you are free to cancel anytime. We will fully transfer over to you the website and all assets used.',
     },
     {
-      question: "Are there any set up fees or hidden costs?",
-      answer: "Absolutely not. We're passionate that our payment structure is clear and open. If you incur additional charges for extra services, these will be explained before work commences to ensure clear pricing structure."
+      question: 'Are there any set up fees or hidden costs?',
+      answer:
+        "Absolutely not. We're passionate that our payment structure is clear and open. If you incur additional charges for extra services, these will be explained before work commences to ensure clear pricing structure.",
     },
     {
-      question: "How long does building a website take?",
-      answer: "It depends on your design! For simple sites, we aim to be live and published within as little as 7 days. For more complicated needs, this time will increase."
+      question: 'How long does building a website take?',
+      answer:
+        'It depends on your design! For simple sites, we aim to be live and published within as little as 7 days. For more complicated needs, this time will increase.',
     },
     {
-      question: "Can I help design my site?",
-      answer: "Yes absolutely! We would love your input. During the initial phase we will discuss your requirements, and any design choices you would like. You will have periodic updates of progress to share ideas and the site will be updated accordingly."
+      question: 'Can I help design my site?',
+      answer:
+        'Yes absolutely! We would love your input. During the initial phase we will discuss your requirements, and any design choices you would like. You will have periodic updates of progress to share ideas and the site will be updated accordingly.',
     },
     {
-      question: "How quickly can updates go live?",
-      answer: "As standard, all updates are completed within 7 days. We appreciate however that sometimes urgent updates are needed, we offer add on services for 72 and 24 hour updates to your site for an additional one off charge."
-    }
+      question: 'How quickly can updates go live?',
+      answer:
+        'As standard, all updates are completed within 7 days. We appreciate however that sometimes urgent updates are needed, we offer add on services for 72 and 24 hour updates to your site for an additional one off charge.',
+    },
   ];
 
   return (
@@ -544,7 +562,9 @@ const FinalCTA = () => (
         Join dozens of UK businesses who have ditched traditional agencies for a better way to build.
       </p>
       <div className="flex justify-center">
-        <Button to="/contact" className="text-lg px-12 py-6">Start Now</Button>
+        <Button to="/contact" className="text-lg px-12 py-6">
+          Start Now
+        </Button>
       </div>
     </div>
   </section>
@@ -558,9 +578,15 @@ const Footer = () => (
         © 2026 One Big Tick Ltd. Registered Office: 128 City Road, London, United Kingdom, EC1V 2NX
       </div>
       <div className="flex gap-6 text-sm text-white/60">
-        <Link to="/privacy" className="hover:text-white">Privacy</Link>
-        <Link to="/terms" className="hover:text-white">Terms</Link>
-        <Link to="/contact" className="hover:text-white">Contact</Link>
+        <Link to="/privacy" className="hover:text-white">
+          Privacy
+        </Link>
+        <Link to="/terms" className="hover:text-white">
+          Terms
+        </Link>
+        <Link to="/contact" className="hover:text-white">
+          Contact
+        </Link>
       </div>
     </div>
   </footer>
@@ -568,9 +594,11 @@ const Footer = () => (
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
+
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+
   return null;
 };
 
@@ -585,7 +613,7 @@ const ContactPage = () => {
   if (submitted) {
     return (
       <div className="min-h-screen pt-32 pb-20 px-6 flex items-center justify-center">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           className="glass p-12 rounded-[3rem] max-w-2xl w-full text-center"
@@ -597,7 +625,9 @@ const ContactPage = () => {
           <p className="text-white/60 text-lg mb-8">
             Thanks for reaching out. We'll review your info and get back to you within 24 hours.
           </p>
-          <Button to="/" variant="secondary">Back to Home</Button>
+          <Button to="/" variant="secondary">
+            Back to Home
+          </Button>
         </motion.div>
       </div>
     );
@@ -618,7 +648,7 @@ const ContactPage = () => {
           <p className="text-xl text-white/60 mb-12 max-w-lg leading-relaxed">
             Ready to evolve your digital presence? Fill out the form and we'll start the conversation.
           </p>
-          
+
           <div className="space-y-8">
             <div className="flex items-start gap-6">
               <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-brand-orange shrink-0">
@@ -653,9 +683,9 @@ const ContactPage = () => {
                 <label className="text-sm font-medium text-white/60 ml-2">Full Name</label>
                 <div className="relative">
                   <User className="absolute left-4 top-1/2 -translate-y-1/2 text-white/20" size={18} />
-                  <input 
+                  <input
                     required
-                    type="text" 
+                    type="text"
                     placeholder="John Doe"
                     className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 pl-12 pr-4 focus:outline-none focus:border-brand-orange/50 transition-colors"
                   />
@@ -665,23 +695,23 @@ const ContactPage = () => {
                 <label className="text-sm font-medium text-white/60 ml-2">Email Address</label>
                 <div className="relative">
                   <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-white/20" size={18} />
-                  <input 
+                  <input
                     required
-                    type="email" 
+                    type="email"
                     placeholder="john@example.com"
                     className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 pl-12 pr-4 focus:outline-none focus:border-brand-orange/50 transition-colors"
                   />
                 </div>
               </div>
             </div>
-            
+
             <div className="space-y-2">
               <label className="text-sm font-medium text-white/60 ml-2">Company Name</label>
               <div className="relative">
                 <Building className="absolute left-4 top-1/2 -translate-y-1/2 text-white/20" size={18} />
-                <input 
+                <input
                   required
-                  type="text" 
+                  type="text"
                   placeholder="Acme Inc."
                   className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 pl-12 pr-4 focus:outline-none focus:border-brand-orange/50 transition-colors"
                 />
@@ -692,7 +722,7 @@ const ContactPage = () => {
               <label className="text-sm font-medium text-white/60 ml-2">Further Info</label>
               <div className="relative">
                 <MessageSquare className="absolute left-4 top-4 text-white/20" size={18} />
-                <textarea 
+                <textarea
                   required
                   rows={4}
                   placeholder="Tell us about your project..."
@@ -750,13 +780,13 @@ const CookieBanner = () => {
     >
       <div className="glass p-6 rounded-[2rem] border border-white/10 shadow-2xl relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-1 bg-brand-orange" />
-        <button 
+        <button
           onClick={() => setIsVisible(false)}
           className="absolute top-4 right-4 text-white/40 hover:text-white transition-colors"
         >
           <X size={20} />
         </button>
-        
+
         <div className="flex items-start gap-4 mb-4">
           <div className="w-10 h-10 bg-brand-orange/20 rounded-xl flex items-center justify-center text-brand-orange shrink-0">
             <Cookie size={24} />
@@ -764,19 +794,20 @@ const CookieBanner = () => {
           <div>
             <h3 className="font-bold text-lg mb-1">Cookie Policy</h3>
             <p className="text-sm text-white/60 leading-relaxed">
-              We use cookies to enhance your experience, analyze site traffic, and serve personalized content. By clicking "Accept", you consent to our use of cookies.
+              We use cookies to enhance your experience, analyze site traffic, and serve personalized content. By clicking
+              &quot;Accept&quot;, you consent to our use of cookies.
             </p>
           </div>
         </div>
-        
+
         <div className="flex gap-3">
-          <button 
+          <button
             onClick={acceptCookies}
             className="flex-1 bg-brand-orange text-white py-3 rounded-xl font-semibold hover:bg-orange-600 transition-colors"
           >
             Accept All
           </button>
-          <button 
+          <button
             onClick={() => setIsVisible(false)}
             className="flex-1 bg-white/5 text-white py-3 rounded-xl font-semibold hover:bg-white/10 border border-white/10 transition-colors"
           >
@@ -788,17 +819,15 @@ const CookieBanner = () => {
   );
 };
 
-const LegalPage = ({ title, content }: { title: string, content: React.ReactNode }) => (
+const LegalPage = ({ title, content }: { title: string; content: React.ReactNode }) => (
   <div className="min-h-screen pt-32 pb-20 px-6">
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       className="max-w-3xl mx-auto"
     >
       <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter mb-12">{title}</h1>
-      <div className="prose prose-invert prose-orange max-w-none text-white/60 space-y-8 leading-relaxed">
-        {content}
-      </div>
+      <div className="prose prose-invert prose-orange max-w-none text-white/60 space-y-8 leading-relaxed">{content}</div>
     </motion.div>
   </div>
 );
@@ -807,11 +836,17 @@ const PrivacyContent = () => (
   <>
     <section>
       <h2 className="text-2xl font-bold text-white mb-4">1. Introduction</h2>
-      <p>At One Big Tick, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website or use our services.</p>
+      <p>
+        At One Big Tick, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use,
+        and safeguard your information when you visit our website or use our services.
+      </p>
     </section>
     <section>
       <h2 className="text-2xl font-bold text-white mb-4">2. Information We Collect</h2>
-      <p>We may collect personal information that you voluntarily provide to us when you express an interest in obtaining information about us or our products and services. This may include:</p>
+      <p>
+        We may collect personal information that you voluntarily provide to us when you express an interest in obtaining
+        information about us or our products and services. This may include:
+      </p>
       <ul className="list-disc pl-6 mt-4 space-y-2">
         <li>Name and contact data (such as email address and phone number)</li>
         <li>Company information</li>
@@ -830,11 +865,17 @@ const PrivacyContent = () => (
     </section>
     <section>
       <h2 className="text-2xl font-bold text-white mb-4">4. Cookies and Tracking Technologies</h2>
-      <p>We use cookies and similar tracking technologies to access or store information. You can manage your cookie preferences through our cookie banner or your browser settings.</p>
+      <p>
+        We use cookies and similar tracking technologies to access or store information. You can manage your cookie
+        preferences through our cookie banner or your browser settings.
+      </p>
     </section>
     <section>
       <h2 className="text-2xl font-bold text-white mb-4">5. Data Security</h2>
-      <p>We aim to protect your personal information through a system of organizational and technical security measures designed to protect the security of any personal information we process.</p>
+      <p>
+        We aim to protect your personal information through a system of organizational and technical security measures
+        designed to protect the security of any personal information we process.
+      </p>
     </section>
     <section>
       <h2 className="text-2xl font-bold text-white mb-4">6. Contact Us</h2>
@@ -847,27 +888,46 @@ const TermsContent = () => (
   <>
     <section>
       <h2 className="text-2xl font-bold text-white mb-4">1. Acceptance of Terms</h2>
-      <p>By accessing or using One Big Tick's services, you agree to be bound by these Terms of Service. If you do not agree to all the terms and conditions, then you may not access the website or use any services.</p>
+      <p>
+        By accessing or using One Big Tick&apos;s services, you agree to be bound by these Terms of Service. If you do
+        not agree to all the terms and conditions, then you may not access the website or use any services.
+      </p>
     </section>
     <section>
       <h2 className="text-2xl font-bold text-white mb-4">2. Description of Service</h2>
-      <p>One Big Tick provides a subscription-based design and development service. We offer various plans that allow clients to request digital assets and development work based on their subscription tier.</p>
+      <p>
+        One Big Tick provides a subscription-based design and development service. We offer various plans that allow
+        clients to request digital assets and development work based on their subscription tier.
+      </p>
     </section>
     <section>
       <h2 className="text-2xl font-bold text-white mb-4">3. Fees and Payment</h2>
-      <p>Clients agree to pay all fees or charges to their account in accordance with the fees, charges, and billing terms in effect at the time a fee or charge is due and payable. Subscriptions are billed in advance on a monthly basis.</p>
+      <p>
+        Clients agree to pay all fees or charges to their account in accordance with the fees, charges, and billing terms
+        in effect at the time a fee or charge is due and payable. Subscriptions are billed in advance on a monthly basis.
+      </p>
     </section>
     <section>
       <h2 className="text-2xl font-bold text-white mb-4">4. Intellectual Property</h2>
-      <p>Unless otherwise agreed upon, all work created by One Big Tick for a client shall be the sole property of the client upon full payment of all fees. One Big Tick retains the right to display the work in its portfolio and marketing materials.</p>
+      <p>
+        Unless otherwise agreed upon, all work created by One Big Tick for a client shall be the sole property of the
+        client upon full payment of all fees. One Big Tick retains the right to display the work in its portfolio and
+        marketing materials.
+      </p>
     </section>
     <section>
       <h2 className="text-2xl font-bold text-white mb-4">5. Limitation of Liability</h2>
-      <p>In no event shall One Big Tick be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses.</p>
+      <p>
+        In no event shall One Big Tick be liable for any indirect, incidental, special, consequential or punitive damages,
+        including without limitation, loss of profits, data, use, goodwill, or other intangible losses.
+      </p>
     </section>
     <section>
       <h2 className="text-2xl font-bold text-white mb-4">6. Governing Law</h2>
-      <p>These Terms shall be governed and construed in accordance with the laws of the United Kingdom, without regard to its conflict of law provisions.</p>
+      <p>
+        These Terms shall be governed and construed in accordance with the laws of the United Kingdom, without regard to
+        its conflict of law provisions.
+      </p>
     </section>
   </>
 );
