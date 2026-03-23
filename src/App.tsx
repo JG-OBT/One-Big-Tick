@@ -64,8 +64,8 @@ const Navbar = () => {
   const isHome = location.pathname === '/';
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 px-4 md:px-6 py-3 md:py-4">
-      <div className="max-w-7xl mx-auto flex items-center justify-between glass rounded-full px-5 md:px-8 py-2.5 md:py-3">
+    <nav className="fixed top-0 left-0 right-0 z-50 px-3 md:px-6 py-3 md:py-4">
+      <div className="max-w-7xl mx-auto flex items-center justify-between glass rounded-full px-4 md:px-8 py-2 md:py-3">
         <Link to="/">
           <Logo />
         </Link>
@@ -148,11 +148,11 @@ const PricingCard = ({ title, price, features, popular = false, delay = 0 }: any
 // --- Sections ---
 
 const Hero = () => (
-  <section className="relative min-h-screen flex items-center pt-32 pb-16 md:pt-36 md:pb-20 lg:pt-24 overflow-hidden">
+  <section className="relative min-h-screen flex items-center pt-40 pb-16 md:pt-44 md:pb-20 lg:pt-24 overflow-hidden">
     <div className="absolute top-1/4 -left-20 w-96 h-96 bg-brand-orange/10 blur-[120px] rounded-full" />
     <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-brand-orange/5 blur-[120px] rounded-full" />
 
-    <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full">
+    <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 lg:gap-16 items-start lg:items-center w-full">
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
@@ -168,7 +168,7 @@ const Hero = () => (
           UK-Based Web Design Subscription
         </motion.div>
 
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-tighter mb-8 leading-[0.95] text-gradient">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl font-extrabold tracking-tighter mb-8 leading-[0.95] text-gradient">
           Websites that <br />
           <span className="text-brand-orange">evolve</span> with your business
         </h1>
@@ -642,11 +642,11 @@ const ContactPage = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-8 leading-tight">
-            Let's build <br />
+            Let&apos;s build <br />
             <span className="text-brand-orange">something big.</span>
           </h1>
           <p className="text-xl text-white/60 mb-12 max-w-lg leading-relaxed">
-            Ready to evolve your digital presence? Fill out the form and we'll start the conversation.
+            Ready to evolve your digital presence? Fill out the form and we&apos;ll start the conversation.
           </p>
 
           <div className="space-y-8">
