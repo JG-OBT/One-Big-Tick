@@ -788,63 +788,43 @@ const ContactPage = () => {
           className="glass p-8 md:p-12 rounded-[3rem] relative"
         >
           <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-white/60 ml-2">Full Name</label>
-                <div className="relative">
-                  <User className="absolute left-4 top-1/2 -translate-y-1/2 text-white/20" size={18} />
-                  <input
-                    required
-                    type="text"
-                    placeholder="John Doe"
-                    className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 pl-12 pr-4 focus:outline-none focus:border-brand-orange/50 transition-colors"
-                  />
-                </div>
-              </div>
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-white/60 ml-2">Email Address</label>
-                <div className="relative">
-                  <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-white/20" size={18} />
-                  <input
-                    required
-                    type="email"
-                    placeholder="john@example.com"
-                    className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 pl-12 pr-4 focus:outline-none focus:border-brand-orange/50 transition-colors"
-                  />
-                </div>
-              </div>
-            </div>
 
-            <div className="space-y-2">
-              <label className="text-sm font-medium text-white/60 ml-2">Company Name</label>
-              <div className="relative">
-                <Building className="absolute left-4 top-1/2 -translate-y-1/2 text-white/20" size={18} />
-                <input
-                  required
-                  type="text"
-                  placeholder="Acme Inc."
-                  className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 pl-12 pr-4 focus:outline-none focus:border-brand-orange/50 transition-colors"
-                />
-              </div>
-            </div>
+  <div className="grid md:grid-cols-2 gap-6">
+    <input
+      name="name"
+      required
+      placeholder="Full Name"
+      className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-4"
+    />
+    <input
+      name="email"
+      type="email"
+      required
+      placeholder="Email"
+      className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-4"
+    />
+  </div>
 
-            <div className="space-y-2">
-              <label className="text-sm font-medium text-white/60 ml-2">Further Info</label>
-              <div className="relative">
-                <MessageSquare className="absolute left-4 top-4 text-white/20" size={18} />
-                <textarea
-                  required
-                  rows={4}
-                  placeholder="Tell us about your project..."
-                  className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 pl-12 pr-4 focus:outline-none focus:border-brand-orange/50 transition-colors resize-none"
-                />
-              </div>
-            </div>
+  <input
+    name="company"
+    required
+    placeholder="Company Name"
+    className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-4"
+  />
 
-            <Button type="submit" className="w-full py-5 text-lg">
-              Send Message <Send size={20} />
-            </Button>
-          </form>
+  <textarea
+    name="message"
+    required
+    rows={4}
+    placeholder="Tell us about your project..."
+    className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-4"
+  />
+
+  <Button type="submit" className="w-full py-5 text-lg">
+    Send Message <Send size={20} />
+  </Button>
+
+</form>
         </motion.div>
       </div>
     </div>
