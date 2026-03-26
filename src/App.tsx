@@ -637,7 +637,7 @@ const ContactPage = () => {
   if (submitted) {
     return (
       <div className="min-h-screen pt-32 pb-20 px-6 flex items-center justify-center">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           className="glass p-12 rounded-[3rem] max-w-2xl w-full text-center"
@@ -647,9 +647,11 @@ const ContactPage = () => {
           </div>
           <h1 className="text-4xl font-bold mb-4">Message Received!</h1>
           <p className="text-white/60 text-lg mb-8">
-            Thanks for reaching out. We'll get back to you within 24 hours.
+            Thanks for reaching out. We&apos;ll get back to you within 24 hours.
           </p>
-          <Button to="/" variant="secondary">Back to Home</Button>
+          <Button to="/" variant="secondary">
+            Back to Home
+          </Button>
         </motion.div>
       </div>
     );
@@ -658,20 +660,18 @@ const ContactPage = () => {
   return (
     <div className="min-h-screen pt-32 pb-20 px-6">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
-
         <div>
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-8 leading-tight">
-            Let's build <br />
+            Let&apos;s build <br />
             <span className="text-brand-orange">something big.</span>
           </h1>
           <p className="text-xl text-white/60 mb-12 max-w-lg leading-relaxed">
-            Ready to evolve your digital presence? Fill out the form and we'll start the conversation.
+            Ready to evolve your digital presence? Fill out the form and we&apos;ll start the conversation.
           </p>
         </div>
 
         <div className="glass p-8 md:p-12 rounded-[3rem]">
           <form onSubmit={handleSubmit} className="space-y-6">
-
             <div className="grid md:grid-cols-2 gap-6">
               <input
                 name="name"
@@ -706,126 +706,8 @@ const ContactPage = () => {
             <Button type="submit" className="w-full py-5 text-lg">
               {loading ? 'Sending...' : 'Send Message'}
             </Button>
-
           </form>
         </div>
-
-      </div>
-    </div>
-  );
-};
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
-
-  if (submitted) {
-    return (
-      <div className="min-h-screen pt-32 pb-20 px-6 flex items-center justify-center">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="glass p-12 rounded-[3rem] max-w-2xl w-full text-center"
-        >
-          <div className="w-20 h-20 bg-brand-orange/20 text-brand-orange rounded-full flex items-center justify-center mx-auto mb-8">
-            <Check size={40} strokeWidth={3} />
-          </div>
-          <h1 className="text-4xl font-bold mb-4">Message Received!</h1>
-          <p className="text-white/60 text-lg mb-8">
-            Thanks for reaching out. We'll review your info and get back to you within 24 hours.
-          </p>
-          <Button to="/" variant="secondary">
-            Back to Home
-          </Button>
-        </motion.div>
-      </div>
-    );
-  }
-
-  return (
-    <div className="min-h-screen pt-32 pb-20 px-6">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-8 leading-tight">
-            Let&apos;s build <br />
-            <span className="text-brand-orange">something big.</span>
-          </h1>
-          <p className="text-xl text-white/60 mb-12 max-w-lg leading-relaxed">
-            Ready to evolve your digital presence? Fill out the form and we&apos;ll start the conversation.
-          </p>
-
-          <div className="space-y-8">
-            <div className="flex items-start gap-6">
-              <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-brand-orange shrink-0">
-                <Mail size={24} />
-              </div>
-              <div>
-                <div className="font-bold mb-1">Email us</div>
-                <div className="text-white/40">contact@onebigtick.co.uk</div>
-              </div>
-            </div>
-            <div className="flex items-start gap-6">
-              <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-brand-orange shrink-0">
-                <Clock size={24} />
-              </div>
-              <div>
-                <div className="font-bold mb-1">Response time</div>
-                <div className="text-white/40">Under 24 hours, guaranteed.</div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="glass p-8 md:p-12 rounded-[3rem] relative"
-        >
-          <form onSubmit={handleSubmit} className="space-y-6">
-
-  <div className="grid md:grid-cols-2 gap-6">
-    <input
-      name="name"
-      required
-      placeholder="Full Name"
-      className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-4"
-    />
-    <input
-      name="email"
-      type="email"
-      required
-      placeholder="Email"
-      className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-4"
-    />
-  </div>
-
-  <input
-    name="company"
-    required
-    placeholder="Company Name"
-    className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-4"
-  />
-
-  <textarea
-    name="message"
-    required
-    rows={4}
-    placeholder="Tell us about your project..."
-    className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-4"
-  />
-
-  <Button type="submit" className="w-full py-5 text-lg">
-    Send Message <Send size={20} />
-  </Button>
-
-</form>
-        </motion.div>
       </div>
     </div>
   );
