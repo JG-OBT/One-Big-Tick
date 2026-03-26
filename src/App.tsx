@@ -565,7 +565,7 @@ const FinalCTA = () => (
         </p>
         <div className="flex justify-center">
           <Button to="/contact" className="text-lg px-12 py-6">
-            Start Now
+            Start Now <ArrowRight size={20} />
           </Button>
         </div>
       </div>
