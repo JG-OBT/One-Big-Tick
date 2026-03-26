@@ -1,6 +1,20 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Check, ArrowRight, Layout, Server, LifeBuoy, Zap, Clock, CreditCard, Plus, Send, Mail, User, Building, MessageSquare, Cookie, X, ChevronDown } from 'lucide-react';
+import {
+  Check,
+  ArrowRight,
+  Layout,
+  Server,
+  LifeBuoy,
+  Zap,
+  Clock,
+  CreditCard,
+  Plus,
+  Send,
+  Cookie,
+  X,
+  ChevronDown,
+} from 'lucide-react';
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
 
 // --- Components ---
@@ -174,7 +188,7 @@ const Hero = () => (
         </h1>
 
         <p className="text-lg md:text-xl text-white/60 mb-10 max-w-lg leading-relaxed">
-          Professional design. Flexible monthly plans. Effortless updates. The last web agency you'll ever need.
+          Professional design. Flexible monthly plans. Effortless updates. The last web agency you&apos;ll ever need.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4">
@@ -469,7 +483,7 @@ const AddOns = () => (
   </section>
 );
 
-const FAQItem = ({ question, answer }: { question: string; answer: string; key?: any }) => {
+const FAQItem = ({ question, answer }: { question: string; answer: string }) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
@@ -554,7 +568,7 @@ const FinalCTA = () => (
   <section className="py-32 px-6">
     <div className="max-w-5xl mx-auto glass p-16 md:p-24 rounded-[4rem] text-center relative overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-brand-orange/5 blur-[120px] pointer-events-none" />
-      
+
       <div className="relative z-10">
         <h2 className="text-4xl md:text-7xl font-extrabold mb-8 leading-tight">
           Your website should <br />
