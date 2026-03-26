@@ -553,18 +553,21 @@ const FAQ = () => {
 const FinalCTA = () => (
   <section className="py-32 px-6">
     <div className="max-w-5xl mx-auto glass p-16 md:p-24 rounded-[4rem] text-center relative overflow-hidden">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-brand-orange/5 blur-[120px]" />
-      <h2 className="text-4xl md:text-7xl font-extrabold mb-8 leading-tight">
-        Your website should <br />
-        <span className="text-brand-orange">grow</span> with your business.
-      </h2>
-      <p className="text-xl text-white/60 mb-12 max-w-2xl mx-auto">
-        Join dozens of UK businesses who have ditched traditional agencies for a better way to build.
-      </p>
-      <div className="flex justify-center">
-        <Button to="/contact" className="text-lg px-12 py-6">
-          Start Now
-        </Button>
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-brand-orange/5 blur-[120px] pointer-events-none" />
+      
+      <div className="relative z-10">
+        <h2 className="text-4xl md:text-7xl font-extrabold mb-8 leading-tight">
+          Your website should <br />
+          <span className="text-brand-orange">grow</span> with your business.
+        </h2>
+        <p className="text-xl text-white/60 mb-12 max-w-2xl mx-auto">
+          Join dozens of UK businesses who have ditched traditional agencies for a better way to build.
+        </p>
+        <div className="flex justify-center">
+          <Button to="/contact" className="text-lg px-12 py-6">
+            Start Now
+          </Button>
+        </div>
       </div>
     </div>
   </section>
