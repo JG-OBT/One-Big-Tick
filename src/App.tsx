@@ -607,6 +607,113 @@ const ScrollToTop = () => {
 
 const ContactPage = () => {
   const [submitted, setSubmitted] = React.useState(false);
+  const [loading, setLoading] = React.useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const response = await fetch('https://formspree.io/f/mwvwkgjz', {
+      method: 'POST',
+      body: formData,
+      headers: {
+        Accept: 'application/json',
+      },
+    });
+
+    setLoading(false);
+
+    if (response.ok) {
+      setSubmitted(true);
+      form.reset();
+    } else {
+      alert('Something went wrong. Please try again.');
+    }
+  };
+
+  if (submitted) {
+    return (
+      <div className="min-h-screen pt-32 pb-20 px-6 flex items-center justify-center">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="glass p-12 rounded-[3rem] max-w-2xl w-full text-center"
+        >
+          <div className="w-20 h-20 bg-brand-orange/20 text-brand-orange rounded-full flex items-center justify-center mx-auto mb-8">
+            <Check size={40} strokeWidth={3} />
+          </div>
+          <h1 className="text-4xl font-bold mb-4">Message Received!</h1>
+          <p className="text-white/60 text-lg mb-8">
+            Thanks for reaching out. We'll get back to you within 24 hours.
+          </p>
+          <Button to="/" variant="secondary">Back to Home</Button>
+        </motion.div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen pt-32 pb-20 px-6">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+
+        <div>
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-8 leading-tight">
+            Let's build <br />
+            <span className="text-brand-orange">something big.</span>
+          </h1>
+          <p className="text-xl text-white/60 mb-12 max-w-lg leading-relaxed">
+            Ready to evolve your digital presence? Fill out the form and we'll start the conversation.
+          </p>
+        </div>
+
+        <div className="glass p-8 md:p-12 rounded-[3rem]">
+          <form onSubmit={handleSubmit} className="space-y-6">
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <input
+                name="name"
+                required
+                placeholder="Full Name"
+                className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-4"
+              />
+              <input
+                name="email"
+                type="email"
+                required
+                placeholder="Email"
+                className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-4"
+              />
+            </div>
+
+            <input
+              name="company"
+              required
+              placeholder="Company Name"
+              className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-4"
+            />
+
+            <textarea
+              name="message"
+              required
+              rows={4}
+              placeholder="Tell us about your project..."
+              className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-4"
+            />
+
+            <Button type="submit" className="w-full py-5 text-lg">
+              {loading ? 'Sending...' : 'Send Message'}
+            </Button>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  );
+};
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
