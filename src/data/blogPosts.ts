@@ -1,5 +1,65 @@
 export const blogPosts = [
   {
+  slug: "how-often-update-website",
+  title: "How often should small businesses update their website?",
+  thumbnail: "/blog/Blog3.jpg",
+  date: "27 October 2025",
+  readTime: "2 min read",
+  excerpt:
+    "An outdated website quietly kills trust and growth. Here’s how often you should actually be updating yours.",
+  content: `
+    <p>In today's fast-paced digital marketplace, small businesses cannot afford to let their websites go stale.</p>
+
+    <p>Regular updates are essential for credibility, visibility, customer trust, and continued growth.</p>
+
+    <h2>Why frequent updates matter</h2>
+
+    <p>Your website is your digital storefront. When it looks outdated or neglected, it sends the wrong message.</p>
+
+    <ul>
+      <li><strong>83% of users</strong> prefer websites that look attractive and up to date</li>
+      <li><strong>38% of people</strong> will stop engaging if the design or content is poor</li>
+      <li>Only <strong>18% of websites</strong> are actively maintained</li>
+    </ul>
+
+    <p>If your site looks abandoned, customers assume your business is too.</p>
+
+    <h2>How often are small business websites updated?</h2>
+
+    <p>Surprisingly, around <strong>25% of small businesses rarely update their website</strong>, sometimes less than once per year.</p>
+
+    <p>In a world where trends, expectations, and customer behaviour shift constantly, this creates a major gap between you and your competitors.</p>
+
+    <h2>Best practices: how often should you update?</h2>
+
+    <p>To stay competitive, you should treat your website as an active part of your business.</p>
+
+    <ul>
+      <li>Update core content and visuals every <strong>quarter</strong> (2–4 times per year)</li>
+      <li>Publish blogs, updates, or offers <strong>monthly</strong> if possible</li>
+      <li>Refresh your design every <strong>1–2 years</strong> to stay modern and responsive</li>
+    </ul>
+
+    <h2>What regular updates actually do</h2>
+
+    <ul>
+      <li><strong>Improve SEO:</strong> Search engines favour active, regularly updated sites</li>
+      <li><strong>Increase trust:</strong> Customers see a business that is alive and evolving</li>
+      <li><strong>Drive engagement:</strong> Fresh content gives visitors a reason to return</li>
+    </ul>
+
+    <p>In fact, low traffic remains a concern for many small businesses — and an outdated website is often a major reason why.</p>
+
+    <h2>Final thought</h2>
+
+    <p>Your website isn’t a one-time project — it’s a living part of your business.</p>
+
+    <p>If you leave it untouched, it slowly becomes irrelevant. But if you keep it active, it becomes a consistent driver of growth.</p>
+
+    <p>For credibility, conversion, and long-term success, make updating your website a priority.</p>
+  `,
+},
+  {
   slug: "frequent-blogging-growth",
   title: "How frequent blogging fuels small business growth",
   thumbnail: "/blog/Blog2.jpg",
