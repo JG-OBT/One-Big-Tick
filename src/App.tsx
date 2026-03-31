@@ -99,6 +99,9 @@ const Navbar = () => {
           <a href={isHome ? '#faq' : '/#faq'} className="hover:text-brand-orange transition-colors">
             FAQ
           </a>
+          <a href="/blog" className="hover:text-brand-orange transition-colors">
+          Blog
+          </a>
         </div>
 
         <Button to="/contact" variant="secondary" className="px-6 py-2 text-sm">
