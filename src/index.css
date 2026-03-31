@@ -25,3 +25,33 @@
 .text-gradient {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60;
 }
+.blog-content h2 {
+  color: white;
+  font-size: 1.875rem;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.blog-content p {
+  margin-bottom: 1.25rem;
+  color: rgb(212 212 216);
+}
+
+.blog-content ul {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.blog-content li {
+  margin-bottom: 0.75rem;
+  color: rgb(212 212 216);
+}
+
+.blog-content strong {
+  color: white;
+}
