@@ -1,5 +1,62 @@
 export const blogPosts = [
   {
+  slug: "frequent-blogging-growth",
+  title: "How frequent blogging fuels small business growth",
+  thumbnail: "/blog/Blog2.jpg",
+  date: "20 October 2025",
+  readTime: "3 min read",
+  excerpt:
+    "Consistent blogging isn’t just content — it’s one of the most effective growth levers for small businesses in 2025.",
+  content: `
+    <p>In the fast-evolving digital landscape of 2025, posting blogs to your small business website isn't just an afterthought — it's a core strategy for driving growth, boosting visibility, and building consumer trust.</p>
+
+    <h2>Why frequent blogging works</h2>
+
+    <p>Blogs are your business's voice, offering expertise, insights, and industry updates. Posting regularly has a powerful effect:</p>
+
+    <ul>
+      <li><strong>Traffic multiplier:</strong> Businesses that publish blogs consistently generate significantly more website visitors than those that don't.</li>
+      <li><strong>SEO rocket fuel:</strong> Over half of blog traffic comes from search engines, making regular content a powerful SEO driver.</li>
+      <li><strong>Authority and trust:</strong> Frequent posts showcase your expertise, building credibility with both customers and search engines.</li>
+    </ul>
+
+    <h2>Eye-opening statistics for 2025</h2>
+
+    <ul>
+      <li>Companies publishing 16+ blog posts per month receive 3.5x more traffic than those posting less often</li>
+      <li>Businesses that blog see 55% more visitors and up to 3x more leads</li>
+      <li>Posting 2–4 times per week can produce results in as little as 1–3 months</li>
+      <li>77% of internet users regularly read blog content</li>
+    </ul>
+
+    <h2>How blogging drives real growth</h2>
+
+    <p>Blogging isn't just about content — it's about compounding visibility and trust over time.</p>
+
+    <ul>
+      <li><strong>Boosts search rankings:</strong> Each new post increases your chances of ranking for new keywords</li>
+      <li><strong>Deepens customer relationships:</strong> Valuable content keeps visitors engaged and coming back</li>
+      <li><strong>Positions your business as a thought leader:</strong> Consistency builds authority in your niche</li>
+    </ul>
+
+    <h2>Best practices for small businesses</h2>
+
+    <ul>
+      <li>Aim for 8–16 posts per month if possible, focused on real customer questions</li>
+      <li>Update older posts regularly — this can significantly improve performance</li>
+      <li>Prioritise quality and relevance over sheer volume</li>
+    </ul>
+
+    <h2>The bottom line</h2>
+
+    <p>Frequent blogging isn’t just good for your digital presence — it directly drives growth.</p>
+
+    <p>With higher visibility, improved SEO, stronger authority, and deeper engagement, a consistent content strategy can become one of your most powerful business assets.</p>
+
+    <p>If your blog feels stagnant, increasing your posting frequency could be the fastest way to accelerate growth.</p>
+  `,
+}
+  {
   slug: "use-your-website-to-grow",
   title: "How to use your website to grow as a company",
   thumbnail: "/blog/Blog1.jpg",
