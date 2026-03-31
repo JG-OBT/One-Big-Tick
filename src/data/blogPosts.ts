@@ -1,5 +1,88 @@
 export const blogPosts = [
   {
+  slug: "why-businesses-need-professional-website",
+  title: "Why every small business needs a professional website",
+  thumbnail: "/blog/Blog4.jpg",
+  date: "3 December 2025",
+  readTime: "3 min read",
+  excerpt:
+    "In a post-COVID world, your website isn’t optional — it’s the foundation of trust, visibility, and survival for small businesses.",
+  content: `
+    <p>The world changed permanently in the wake of COVID-19. For small businesses, the digital storefront is now just as important — if not more so — than the physical one.</p>
+
+    <p>If you run a small business, a professional, well-designed website is no longer optional. It’s a core requirement for survival and long-term growth.</p>
+
+    <h2>The new norm: online first impressions matter</h2>
+
+    <p>The pandemic accelerated digital transformation dramatically. Today, most customers will encounter your business online before anything else.</p>
+
+    <ul>
+      <li>Users form an opinion about your website in just <strong>0.05 seconds</strong></li>
+      <li><strong>48% of people</strong> judge a business’s credibility based on web design</li>
+      <li><strong>57% won’t recommend</strong> a business with a poorly designed website</li>
+    </ul>
+
+    <p>Your website is no longer just a tool — it’s your first impression, your storefront, and your brand identity in one place.</p>
+
+    <h2>Building consumer confidence in uncertain times</h2>
+
+    <p>COVID-19 reshaped consumer expectations. People now expect businesses to be transparent, accessible, and responsive.</p>
+
+    <p>Your website is the fastest way to communicate that.</p>
+
+    <ul>
+      <li>Share opening hours, contact details, and real-time updates</li>
+      <li>Offer online booking, ordering, or virtual services</li>
+      <li>Promote offers and incentives for cautious, price-sensitive customers</li>
+      <li>Show that your business is active, responsive, and trustworthy</li>
+    </ul>
+
+    <p>In uncertain environments, clarity builds confidence — and your website is where that clarity lives.</p>
+
+    <h2>The stats don’t lie</h2>
+
+    <p>The shift toward digital isn’t slowing down — and the data makes that clear.</p>
+
+    <ul>
+      <li><strong>43% of small businesses</strong> are investing in website performance</li>
+      <li>Users are <strong>67% more likely to buy</strong> from mobile-friendly websites</li>
+      <li><strong>38% of users</strong> leave immediately if the design is unattractive</li>
+      <li>E-commerce continues to grow at a massive global scale</li>
+      <li><strong>70% of websites</strong> lack a clear call to action — meaning lost revenue</li>
+    </ul>
+
+    <p>A strong website doesn’t just look good — it directly impacts revenue.</p>
+
+    <h2>More than marketing — it’s survival</h2>
+
+    <p>Many businesses survived lockdowns because their website allowed them to operate virtually.</p>
+
+    <p>Your website works for you 24/7 — answering questions, generating leads, and serving customers even when you’re not available.</p>
+
+    <p>This constant presence is what allows small businesses to compete with larger players.</p>
+
+    <h2>Staying competitive in 2025 and beyond</h2>
+
+    <p>In today’s digital-first world, your website is the centre of your business ecosystem.</p>
+
+    <ul>
+      <li>It supports your marketing and social media</li>
+      <li>It improves visibility through search engines</li>
+      <li>It converts visitors into customers</li>
+    </ul>
+
+    <p>Good design, fast performance, and clear structure are no longer optional — they are expected.</p>
+
+    <h2>Final thoughts</h2>
+
+    <p>If your website is outdated or doesn’t exist, it’s not just a missed opportunity — it’s a risk.</p>
+
+    <p>In a world where customers search, compare, and decide online, visibility is everything.</p>
+
+    <p>A professional website builds trust, drives growth, and keeps your business competitive in an increasingly connected world.</p>
+  `,
+},
+  {
   slug: "how-often-update-website",
   title: "How often should small businesses update their website?",
   thumbnail: "/blog/Blog3.jpg",
