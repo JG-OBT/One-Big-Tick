@@ -28,11 +28,11 @@ export default function Blog() {
               to={`/blog/${post.slug}`}
               className="group block overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-950 hover:border-zinc-600 transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="aspect-[16/10] overflow-hidden">
+              <div className="aspect-[16/10] overflow-hidden bg-zinc-900">
                 <img
                   src={post.thumbnail}
                   alt={post.title}
-                  className="h-full w-full object-cover group-hover:scale-105 transition duration-700 ease-out"
+                  className="h-full w-full object-contain group-hover:scale-105 transition duration-700 ease-out"
                 />
               </div>
 
