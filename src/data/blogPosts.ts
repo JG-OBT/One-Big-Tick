@@ -55,7 +55,7 @@ export const blogPosts = [
 
     <p>If your blog feels stagnant, increasing your posting frequency could be the fastest way to accelerate growth.</p>
   `,
-}
+},
   {
   slug: "use-your-website-to-grow",
   title: "How to use your website to grow as a company",
