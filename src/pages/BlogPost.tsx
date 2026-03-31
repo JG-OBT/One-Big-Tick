@@ -46,18 +46,7 @@ export default function BlogPost() {
         </div>
 
         <div
-          className="prose prose-invert prose-lg max-w-none
-          prose-headings:text-white
-          prose-headings:tracking-tight
-          prose-p:text-zinc-300
-          prose-p:leading-relaxed
-          prose-strong:text-white
-          prose-a:text-brand-orange
-          prose-a:no-underline
-          hover:prose-a:underline
-          prose-li:text-zinc-300
-          prose-blockquote:text-zinc-300
-          prose-blockquote:border-zinc-700"
+          className="blog-content text-zinc-300 text-lg leading-relaxed"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
       </article>
