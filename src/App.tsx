@@ -1,3 +1,5 @@
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import React from 'react';
 import { motion } from 'motion/react';
 import {
@@ -929,6 +931,8 @@ export default function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/privacy" element={<LegalPage title="Privacy Policy" content={<PrivacyContent />} />} />
         <Route path="/terms" element={<LegalPage title="Terms of Service" content={<TermsContent />} />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
       </Routes>
       <Footer />
     </div>
