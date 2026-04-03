@@ -1,3 +1,5 @@
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import React from 'react';
 import { motion } from 'motion/react';
 import {
@@ -96,6 +98,9 @@ const Navbar = () => {
           </a>
           <a href={isHome ? '#faq' : '/#faq'} className="hover:text-brand-orange transition-colors">
             FAQ
+          </a>
+          <a href="/blog" className="hover:text-brand-orange transition-colors">
+          Blog
           </a>
         </div>
 
@@ -423,7 +428,7 @@ const Pricing = () => (
     <div className="max-w-7xl mx-auto">
       <div className="text-center mb-20">
         <h2 className="text-4xl md:text-6xl font-bold mb-6">Simple pricing.</h2>
-        <p className="text-xl text-white/50 max-w-2xl mx-auto">No contracts. No hidden fees. Cancel anytime.</p>
+        <p className="text-xl text-white/50 max-w-2xl mx-auto"> No hidden fees. Min 1 year contract.</p>
       </div>
       <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         <PricingCard
@@ -929,6 +934,8 @@ export default function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/privacy" element={<LegalPage title="Privacy Policy" content={<PrivacyContent />} />} />
         <Route path="/terms" element={<LegalPage title="Terms of Service" content={<TermsContent />} />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
       </Routes>
       <Footer />
     </div>
