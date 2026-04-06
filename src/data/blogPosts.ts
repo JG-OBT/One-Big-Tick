@@ -1,5 +1,52 @@
 export const blogPosts = [
   {
+  slug: "leaky-bucket-conversion-rate-optimization",
+  title: "The \"Leaky Bucket\" Effect: How to Keep the Customers You Worked So Hard to Find",
+  thumbnail: "/blog/Blog21.jpg",
+  date: "6 April 2026",
+  readTime: "4 min read",
+  excerpt:
+    "Driving traffic is only half the battle — if your website isn’t converting visitors into customers, you’re leaking opportunities every single day.",
+  content: `
+    <p>You’ve optimized your site speed, you’re posting on social media, and the traffic is finally starting to flow. But there’s a common trap many small businesses fall into: The Leaky Bucket. Imagine pouring water (new visitors) into a bucket, only for it to pour out of holes in the bottom because the experience isn't "sticky" enough. If you’re getting clicks but no calls, it’s time to talk about Conversion Rate Optimization (CRO)—the art of making sure that once someone finds you, they never want to leave.</p>
+
+    <h2>Why Traffic is Only Half the Battle</h2>
+
+    <p>Many business owners get obsessed with "more hits." But 1,000 visitors who do nothing are less valuable than 10 visitors who buy something. To patch the holes in your bucket, your website needs to do three things immediately:</p>
+
+    <ul>
+      <li><strong>Pass the "5-Second Test":</strong> Within five seconds of landing on your site, a stranger should know exactly what you sell and how it makes their life better. If they have to hunt for your purpose, they’ll hunt for your competitor instead.</li>
+      <li><strong>Provide a Clear Path:</strong> Every page needs a "Next Step." Whether it’s a "Book Now" button, a "Call for a Quote" link, or an email sign-up, don't leave your customers guessing what to do next.</li>
+      <li><strong>Build "Social Proof":</strong> We are social creatures. Seeing a scrolling bar of logos, a few 5-star reviews, or a "Trusted by 500+ locals" badge acts as a safety net for new customers.</li>
+    </ul>
+
+    <h2>Beyond the Website: Diversifying Your Growth</h2>
+
+    <p>While your website is the hub, you can’t ignore the spokes. To keep that bucket full, look at these two powerful traffic-boosters:</p>
+
+    <ul>
+      <li><strong>The "Secret" Power of Email:</strong> Social media is a rented audience; your email list is your owned audience. Even a simple monthly "Insider Update" can drive repeat traffic to your site without you having to pay for ads. It’s the ultimate way to stay "top of mind."</li>
+      <li><strong>Video Content (It's not just for Gen Z):</strong> A 30-second video of you explaining a common industry problem can do more for your trust-building than 1,000 words of text. People buy from people. Put your face (or at least your voice) out there!</li>
+    </ul>
+
+    <h2>3 "Bucket-Patching" Fixes to Try Today</h2>
+
+    <p>You can improve your conversion rate this afternoon with these simple tweaks:</p>
+
+    <ul>
+      <li><strong>Move Your Contact Info:</strong> Don’t make people scroll to the footer to find your phone number. Put it in the top right corner of every page.</li>
+      <li><strong>Simplify Your Forms:</strong> Every extra field in a contact form reduces the chance of someone filling it out. Do you really need their home address right now? Just get the name and email; you can ask the rest later.</li>
+      <li><strong>Use "You" Language:</strong> Audit your homepage. If it says "We do this" and "Our company is that," flip it. Change it to: "You will get..." or "Your business deserves..." Focus on the customer’s journey, not your own.</li>
+    </ul>
+
+    <h2>The Bottom Line</h2>
+
+    <p>Don't just focus on getting more people to the party—make sure the party is so good they don't want to leave. A website that converts is the difference between a digital hobby and a growing business.</p>
+
+    <p>Is your contact form too long? Try filling it out yourself today and see if it feels like a chore!</p>
+  `,
+},
+  {
   slug: "fast-website-secret-sales-weapon",
   title: "The \"Invisible\" Competitor: Why a Fast Website is Your Secret Sales Weapon",
   thumbnail: "/blog/Blog20.jpg",
