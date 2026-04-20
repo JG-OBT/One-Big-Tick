@@ -6,9 +6,9 @@ export const blogPosts = [
   date: "20 April 2026",
   readTime: "6 min read",
   excerpt:
-    "Most websites just sit there — but a well-built one works like a top-performing employee, generating leads, answering questions, and driving sales around the clock.",
+    "Most websites just sit there, but a well-built one works like a top-performing employee, generating leads, answering questions, and driving sales around the clock.",
   content: `
-    <p>In the early days of small business, your best "employee" was often the person standing on the sidewalk with a sandwich board or the one answering the phone with a smile. Today, that role has been inherited by your website.</p>
+    <p>In the early days of small business, your best "employee" was often the person standing on the pavement with a sandwich board or the one answering the phone with a smile. Today, that role has been inherited by your website.</p>
 
     <p>But here is the hard truth: most small business websites are "lazy employees." They sit there, look decent, but they don't actually work. If your website isn't actively bringing in leads, answering questions, and closing sales while you sleep, it’s time for a performance review. This week, we are looking at how to transform your digital presence from a static brochure into a 24/7 revenue generator.</p>
 
