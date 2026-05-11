@@ -1,5 +1,63 @@
 export const blogPosts = [
   {
+  slug: "mobile-first-website-design",
+  title: "The \"Mobile First\" Mindset: Why Your Website is Most Likely in Your Customer’s Pocket",
+  thumbnail: "/blog/Blog26.jpg",
+  date: "11 May 2026",
+  readTime: "3 min read",
+  excerpt:
+    "Most customers will experience your business on a phone first — if your website isn’t built for mobile, you’re losing leads before they even contact you.",
+  content: `
+    <p>We’ve talked about your website being a 24/7 salesman and a local beacon. But here is the reality check: for most of your customers, your "salesman" is currently about 5 inches tall and sitting in their pocket.</p>
+
+    <p>Over 60% of global web traffic now comes from mobile devices, and for local service businesses, that number is often much higher. If your website was designed for a 27-inch desktop screen and hasn't been touched since, you aren’t just "outdated"—you’re actively pushing customers away. This week, we’re looking at how to optimize for the "thumb-scrolling" generation to ensure you don't lose traffic at the final hurdle.</p>
+
+    <h2>1. The "Fat Thumb" Test</h2>
+
+    <p>Mobile users aren't using a precise mouse; they’re using their thumbs, often while walking, commuting, or multitasking.</p>
+
+    <ul>
+      <li><strong>Button Size:</strong> Your "Call to Action" buttons should be large enough to hit without accidentally clicking something else.</li>
+      <li><strong>Spacing:</strong> Ensure links aren't bunched together. There is nothing more frustrating for a customer than trying to click "Call Now" and accidentally hitting the "Privacy Policy" link instead.</li>
+      <li><strong>Input Fields:</strong> If you have a contact form, ensure the text boxes are large and clear. Better yet, use "click-to-call" buttons so they don't have to type at all.</li>
+    </ul>
+
+    <h2>2. Speed is Non-Negotiable on 4G/5G</h2>
+
+    <p>Desktop users often have high-speed home internet. Mobile users might be on a patchy signal at a train station.</p>
+
+    <ul>
+      <li><strong>Large Images:</strong> Huge, uncompressed photos will kill your mobile load time. If a page takes longer than 3 seconds to load on a phone, most users will bounce back to the search results.</li>
+      <li><strong>Minimalist Design:</strong> On a small screen, less is more. Remove unnecessary pop-ups or heavy animations that slow down the experience and clutter the limited space.</li>
+    </ul>
+
+    <h2>3. The "Mobile-Only" Search Intent</h2>
+
+    <p>People search differently on their phones. They are often looking for immediate action or specific information.</p>
+
+    <ul>
+      <li><strong>Direct Access to Info:</strong> Your address, phone number, and opening hours should be at the very top of your mobile site. Don't make them dig through an "About Us" page to find where you are.</li>
+      <li><strong>Map Integration:</strong> One-tap access to Google Maps is a game-changer for local traffic. If they can get directions in one click, they are much more likely to show up.</li>
+    </ul>
+
+    <h2>3 Quick Mobile Fixes for This Afternoon</h2>
+
+    <p>You don’t need a full redesign to improve your mobile experience. Try these three tweaks:</p>
+
+    <ul>
+      <li><strong>Check Your Navigation:</strong> Is your menu a "hamburger" (the three little lines)? Ensure it opens easily and is readable on a small screen.</li>
+      <li><strong>Enable Click-to-Call:</strong> Ensure your phone number is a link that triggers a call when tapped.</li>
+      <li><strong>The "Squint Test":</strong> Look at your site on your phone and squint. Can you still tell what your main call to action is? If not, make that button bigger and brighter!</li>
+    </ul>
+
+    <h2>The Bottom Line</h2>
+
+    <p>Your website's "home" is no longer on a desk; it's in your customer's hand. When you make it easy for people to find, contact, and buy from you on mobile, you aren't just improving your site—you're removing the friction between your business and a sale.</p>
+
+    <p><strong>Grab your phone right now and try to book a service on your own site. Was it easy, or did you want to throw your phone? Your customers feel the same way!</strong></p>
+  `,
+},
+  {
   slug: "digital-landgrab-niche-dominance",
   title: "The \"Digital Landgrab\": Why Owning Your Niche Online is the Ultimate Competitive Edge",
   thumbnail: "/blog/Blog25.jpg",
