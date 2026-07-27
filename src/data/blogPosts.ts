@@ -1,5 +1,67 @@
 export const blogPosts = [
   {
+  slug: "seo-foundation-site-structure",
+  title: "The \"SEO Foundation\": How Clear Site Structure Helps Google Send You Free Customers",
+  thumbnail: "/blog/Blog37.jpg",
+  date: "27 July 2026",
+  readTime: "4 min read",
+  excerpt:
+    "A well-structured website makes it easier for both customers and search engines to find what they need. Better organization leads to better rankings, more traffic, and more enquiries.",
+  content: `
+    <p>Imagine stepping into a massive, multi-story bookshop looking for a specific guide on local home maintenance. But as you walk inside, you realize there are no category signs, no bookshelf labels, and books are just piled in random stacks across the floor.</p>
+
+    <p>Even if the bookshop contains the exact answer you need, finding it is going to take an immense amount of effort. Most people would turn around and walk right out to find a shop with neat, labeled aisles.</p>
+
+    <p>In search engine optimization, Google’s web crawlers act like that exact shop visitor.</p>
+
+    <p>If your website's navigation is messy, your pages are buried behind dead-end links, or your site structure lacks a clear hierarchy, Google’s automated indexers struggle to map out what your business actually does. When search engines get confused, they play it safe by ranking your organised local competitors ahead of you. This week, we are breaking down how to organise your digital storefront so search engines can easily index your value and send a steady stream of ready-to-buy clients directly to your door.</p>
+
+    <h2>1. The Anatomy of a Clean Site Hierarchy</h2>
+
+    <p>A well-structured website resembles a clean organisational chart. It guides both human visitors and search engine bots logically from broad concepts down to specific services.</p>
+
+    <p>To build an intuitive digital architecture, structure your hub around three main tiers:</p>
+
+    <ul>
+      <li><strong>The Main Pillar (Homepage):</strong> This is your high-level overview. It clearly states who you are, what local areas you serve, and links directly to your core service categories.</li>
+
+      <li><strong>Core Service Pages (The Aisles):</strong> Instead of cramming all your offerings onto a single "Services" page, dedicate individual, targeted pages to each major offering. For example, rather than just "Services," separate your offerings into clear pages like "Web Design," "SEO Audits," and "Brand Strategy."</li>
+
+      <li><strong>Supporting Content (The Articles):</strong> Your weekly blog posts, case studies, and local guides act as the supporting pillars. Each blog post should answer a specific customer question and link directly back to the relevant core service page, signalling to Google that your main page is an authority on the topic.</li>
+    </ul>
+
+    <h2>2. Internal Linking: The Secret Map for Search Crawlers</h2>
+
+    <p>Google discovers new pages on your site by following links from one page to another. If a page has no internal links pointing to it, search engines treat it as an abandoned island.</p>
+
+    <ul>
+      <li><strong>Passing Search Authority:</strong> When your homepage or a popular blog post gains traffic and backlinks, it accumulates authority. By placing clear internal links within your content, you pass that value to your service pages, helping them rank higher in local search results.</li>
+
+      <li><strong>Contextual Anchor Text:</strong> Avoid generic link text like "click here" or "read more." Instead, use descriptive phrases such as "our local SEO services" so search engines clearly understand the destination page.</li>
+
+      <li><strong>Eliminating Dead Ends:</strong> Every page on your website should lead somewhere next. Whether it's a related article or a clear call-to-action, keeping visitors and search crawlers moving through your site improves both usability and SEO.</li>
+    </ul>
+
+    <h2>3. Three Steps to Clean Up Your Site Architecture This Week</h2>
+
+    <p>You don't need a complete rebuild to improve your website's structure. Start with these three quick improvements:</p>
+
+    <ul>
+      <li><strong>Map Out Your URLs:</strong> A clean URL should look like <code>yourwebsite.com/services/web-design</code> rather than <code>yourwebsite.com/page-id-492</code>. Keep URLs short, descriptive, and easy to understand.</li>
+
+      <li><strong>Audit Your Header Menu:</strong> Limit your main navigation to five to seven key links, such as Home, Services, Case Studies, Blog, and Contact. A simple menu helps both visitors and search engines navigate your site efficiently.</li>
+
+      <li><strong>Add a Dynamic Footer:</strong> Use your footer to link to your core service pages, contact information, and important local pages. Since the footer appears on every page, it helps search engines quickly discover your most valuable content.</li>
+    </ul>
+
+    <h2>The Bottom Line</h2>
+
+    <p>Search engines don't reward websites simply for having great information—they reward websites that make that information easy to find. By organising your digital storefront into clear, logical sections, you reduce friction for both visitors and search engines, helping your business attract more organic traffic and generate more enquiries.</p>
+
+    <p><strong>Take a look at your website's main menu today. Is your structure as clear and welcoming as a well-organised shop, or are you forcing Google to dig through random stacks of books? A few small changes could make a huge difference.</strong></p>
+  `,
+},
+  {
   slug: "mobile-first-imperative",
   title: "The \"Mobile-First\" Imperative: Why a Clunky Phone Experience Silently Kills Your Enquiries",
   thumbnail: "/blog/Blog36.jpg",
